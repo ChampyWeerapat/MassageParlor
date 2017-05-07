@@ -12,36 +12,32 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        DB::table('roles')->insert([
-            'name' => 'Member',
-            'slug' => 'member',
-            'level' => 1,
-        ]);
+        \HttpOz\Roles\Models\Role::create([
+        'name' => 'Owner',
+        'slug' => 'owner',
+    	]);
 
-        DB::table('roles')->insert([
-            'name' => 'Employee',
-            'slug' => 'employee',
-            'level' => 1,
-        ]);
+    	\HttpOz\Roles\Models\Role::create([
+        'name' => 'Employee',
+        'slug' => 'employee',
+    	]);
 
-        DB::table('roles')->insert([
-            'name' => 'Owner',
-            'slug' => 'owner',
-            'level' => 1,
-        ]);
+    	\HttpOz\Roles\Models\Role::create([
+        'name' => 'Member',
+        'slug' => 'member',
+    	]);
 
-        DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'apisit.r@ku.th',
-            'password' => bcrypt('admin'),
-            'address' => 'abc',
-            'tel' => '0809950951',
-        ]);
+    	$adminRole = \HttpOz\Roles\Models\Role::whereSlug('owner')->first();
 
-        DB::table('role_user')->insert([
-            'role_id' => 3,
-            'user_id' => 1,
-        ]);
+    	$admin = \App\User::create([
+        	'name' => 'admin',
+        	'email' => 'oscar@github.com',
+        	'password' => bcrypt('admin'),
+        	'address' => 'abc',
+        	'tel' => '0809950951',
+    	]);
+
+    	$admin->attachRole($adminRole);
 
 
     }

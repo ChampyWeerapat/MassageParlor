@@ -176,10 +176,15 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        /**
-         * Third Party Service Providers...
+        /*
+         * Laravel Framework Service Providers...
          */
-        Bican\Roles\RolesServiceProvider::class,
+        Illuminate\Foundation\Providers\ArtisanServiceProvider::class,
+        Illuminate\Auth\AuthServiceProvider::class,
+        /**
+         * Package Service Providers...
+         */
+        HttpOz\Roles\RolesServiceProvider::class,
 
     ],
 

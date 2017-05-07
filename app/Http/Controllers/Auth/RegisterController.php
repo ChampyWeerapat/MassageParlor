@@ -64,10 +64,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $memberRole = Role::create([
-                'name' => 'Owner',
-                'slug' => 'owner',
-            ]);
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -76,7 +72,8 @@ class RegisterController extends Controller
             'tel' => $data['tel'],
         ]);
 
-        // $user->attachRole($memberRole);
+        $memberRole = Role::find(3);
+        $user->attachRole($memberRole);
 
         return $user;
     }
