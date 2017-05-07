@@ -18,6 +18,7 @@ class Course extends Migration
             $table->increments('id');
             $table->string('description');
             $table->integer('duration');
+            $table->integer('price');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -15,8 +15,10 @@ class Voucher extends Migration
     {
         //
         Schema::create('voucher', function (Blueprint $table) {
-            $table->increments('id')->unique();
+            $table->increments('id');
             $table->string('code');
+            $table->string('type');
+            $table->integer('amount');
             $table->string('description');
             $table->rememberToken();
             $table->timestamps();

@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+use Bican\Roles\Models\Role;
+
 class RegisterController extends Controller
 {
     /*
@@ -62,12 +64,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $memberRole = Role::create([
+                'name' => 'Owner',
+                'slug' => 'owner',
+            ]);
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'address' => $data['address'],
             'tel' => $data['tel'],
         ]);
+
+        // $user->attachRole($memberRole);
+
+        return $user;
     }
 }
