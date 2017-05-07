@@ -21,6 +21,30 @@
         </div>
     </header>
 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav" >
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">Course</a>
+            </li>
+
+            <li>
+                <a href="about.html">Massager</a>
+            </li>
+
+            <li>
+                <a href="post.html">Reservation</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+
+    @include('layouts._slider')
+
     <!-- Main Content -->
     <div class="container">
         <div class="row">
