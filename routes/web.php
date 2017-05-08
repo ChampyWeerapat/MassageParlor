@@ -26,10 +26,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/reservation', 'ReserveController@index');
 
-Route::get('reservation', function () {
-    return view('reservation');
-});
-
 Route::get('/contact', function () {
     return view('contactus');
 });
