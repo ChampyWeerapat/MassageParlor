@@ -15,10 +15,10 @@
         <h1>Reserve Course</h1>
       </div>
 
-      <div class="row">
+      <div class="row" id="vue-app">
         <div class="col col-md-8" style="padding-left:10%;">
           <div class="block-reserve">
-            <div class="container" id="vue-app">
+            <div class="container">
               <form action="">
                 <div class="reserved-date">
                   <div class="form-group">
@@ -30,7 +30,7 @@
                         <label>:</label>
                       </div>
                       <div class="col-6 col-md-4">
-                        <input type="date" id="date" class="form-control">
+                        <input type="date" id="date" class="form-control" v-model="date">
                       </div>
                     </div>
                   </div>
@@ -49,7 +49,7 @@
                           <select name="course-list" class="form-control">
 							@foreach ($courses as $course)
                             <option value="$course->id" >
-                                     {{$course->name}}
+                                     {{ $course->name }}
                             </option>
                             @endforeach
                           </select>
@@ -72,7 +72,7 @@
                     </div>
                 </div>
 
-                <br />
+                <br/>
 
                 <div v-if=hasMassagist>
                   <div class="form-group">
@@ -90,7 +90,7 @@
                           <select name="massagist-list" class="form-control">
                             @foreach ($massagists as $massagist)
                             <option value="$massagists->id" >
-                                     {{$massagist->name}}
+                                     {{ $massagist->name }}
                             </option>
                             @endforeach
                           </select>
@@ -110,10 +110,12 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                          </tr>
+                        	@foreach ($massagists as $massagist)
+	                        	<tr>
+		                            <td></td>
+		                            <td></td>
+	                          	</tr>
+                          	@endforeach
                         </tbody>
                       </table>
                     </div>
@@ -130,17 +132,16 @@
                           <label>:</label>
                         </div>
                         <div class="col-6 col-md-4">
-                          <input type="time" id="time" class="form-control" >
+                          <input type="time" id="time" class="form-control" v-model="time">
                         </div>
                       </div>
-                    </div>
                   </div>
-                <br/>
+                </div>
 				@if (Route::has('login'))
 					@if (Auth::check())
 		                <div class="show-redeem-point">
 		                  <p>
-		                    Your points : @{{ profile.point }}
+		                    Your points : {{ Auth::user()->point }}
 		                    (1 point = 1 Baht)
 		                  </p>
 		                </div>
@@ -183,9 +184,16 @@
 
 
         <div class="col col-md-4">
-          <div style="border:1px solid gray; border-radius:5px; margin-right:10%; height:450px; padding:20px;">
-              test
-          </div>
+          	<div style="border:1px solid gray; border-radius:5px; margin-right:10%; height:450px; padding:20px;">
+              <div name="date-report">
+              	Date : 
+              	@{{ date }}
+              </div>
+              <div name="price-report">
+              	Price: 
+              	@{{ time }}
+              </div>
+          	</div>
         </div>
       </div>
 
@@ -200,12 +208,14 @@
 		el: '#vue-app',
         data: {
         	hasMassagist: false,
-        	profile: {
-        		id: '',
-	            name: '',
-	            point: 0
-        	},
-        	isMember: false
+        	date: "",
+        	time: "",
+        	price: 0
+        },
+        compute: {
+        	getPrice: function() {
+        		
+        	}
         },
         method: {
         	submitReserve: function() {
