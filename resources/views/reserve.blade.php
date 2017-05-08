@@ -26,8 +26,18 @@
 					   v-on:click="hasMassagist=!hasMassagist"
 					   checked>
 					ไม่มี
-
+				
 				<br>
+				<br>
+				<div v-if=hasMassagist>
+					<select name="course-list">
+						<option value="" v-for='(course, index) in courses'>
+							@{{ index + 1 }}.
+							@{{ course.name }}
+						</option>
+					</select>
+				</div>
+				
 				<br>
 				<div v-if=hasMassagist>
 					<select name="massagist-list">
@@ -51,6 +61,15 @@
 				</table>
 			</div>
 
+			<div>
+				<p>
+					เวลาที่เริ่ม : 
+					<input type="text" id="hour" maxlength="2" size="2" placeholder="hr">
+					:
+					<input type="text" id="minute" maxlength="2" size="2" placeholder="min">
+				</p>
+			</div>
+
 			<div class="show-redeem-point" v-if="isMember">
 				<p>
 					แต้มสะสมที่มี : @{{ profile.point }}
@@ -58,7 +77,14 @@
 				</p>
 			</div>
 
-			<br>
+			<div class="show-redeem-point" v-if="!isMember">
+				<p>
+					คุณไม่ได้เป็นสมาชิก
+					สมัครสมาชิก
+					<a href="http://massageparlor.dev/register">กดที่นี่เบาๆ</a>
+				</p>
+			</div>
+
 			<div class="voucher-field">
 				กรอกโค้ด Voucher: 
 				<input type="text" id="voucher-code">
@@ -86,9 +112,7 @@
 	            point: 0
         	},
         	massagists: [],
-        	formMassagist: {
-        		name: ''
-        	},
+        	courses: [],
         	isMember: false
         },
         mounted: function() {
@@ -103,6 +127,15 @@
         	});
         	this.massagists.push({
         		name: 'Air'
+        	});
+        	this.courses.push({
+        		name: 'Body'
+        	});
+        	this.courses.push({
+        		name: 'Half'
+        	});
+        	this.courses.push({
+        		name: 'Feet'
         	});
         },
         method: {
