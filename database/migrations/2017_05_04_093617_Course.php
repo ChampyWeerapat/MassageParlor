@@ -16,9 +16,11 @@ class Course extends Migration
         //
         Schema::create('course', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
             $table->string('description');
             $table->integer('duration');
             $table->integer('price');
+            $table->string('imgpath');
             $table->rememberToken();
             $table->timestamps();
         });
