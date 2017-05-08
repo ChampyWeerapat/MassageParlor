@@ -36,3 +36,11 @@ Route::get('reservation', function () {
 Route::get('/contact', function () {
     return view('contactus');
 });
+
+Route::get('/massager', function () {
+    return view('massager');
+});
+
+Route::get('/add-employee', function () {
+    return view('add-employee');
+});

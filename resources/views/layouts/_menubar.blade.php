@@ -15,8 +15,8 @@
             <a href="/">Home</a>
             <a href="/reservation">Reservation</a>
             <a href="">Package & Promotion</a>
-            <a href="">Massager</a>
-            <a href="contact">Contact Us</a>
+            <a href="/massager">Massager</a>
+            <a href="/contact">Contact Us</a>
         </div>
     </div>
 
