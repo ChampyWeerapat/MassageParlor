@@ -11,34 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
-        \HttpOz\Roles\Models\Role::create([
-        'name' => 'Owner',
-        'slug' => 'owner',
-    	]);
-
-    	\HttpOz\Roles\Models\Role::create([
-        'name' => 'Employee',
-        'slug' => 'employee',
-    	]);
-
-    	\HttpOz\Roles\Models\Role::create([
-        'name' => 'Member',
-        'slug' => 'member',
-    	]);
-
-    	$adminRole = \HttpOz\Roles\Models\Role::whereSlug('owner')->first();
-
-    	$admin = \App\User::create([
-        	'name' => 'admin',
-        	'email' => 'oscar@github.com',
-        	'password' => bcrypt('admin'),
-        	'address' => 'abc',
-        	'tel' => '0809950951',
-    	]);
-
-    	$admin->attachRole($adminRole);
-
-
+        $this->call(AdminSeeder::class);
+		$this->call(CourseSeeder::class);
+		$this->call(MassagistSeeder::class);
     }
 }
