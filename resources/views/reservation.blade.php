@@ -39,10 +39,11 @@
 					No
 				<div v-if=hasMassagist>
 					<select name="massagist-list">
-						<option value="" v-for='(massagist, index) in massagists'>
-							@{{ index + 1 }}.
-							@{{ massagist.name }}
-						</option>
+						@foreach ($massagists as $massagist)
+							<option value="{{$massagist->id}}">
+								{{$massagist->name}}
+							</option>
+						@endforeach
 					</select>
 				</div>
 			</div>
@@ -95,20 +96,6 @@
         		name: ''
         	},
         	isMember: false
-        },
-        mounted: function() {
-        	this.massagists.push({
-        		name: 'Apisit'
-        	});
-        	this.massagists.push({
-        		name: 'Weerapat'
-        	});
-        	this.massagists.push({
-        		name: 'Nampueng'
-        	});
-        	this.massagists.push({
-        		name: 'Air'
-        	});
         },
         method: {
         	submitReserve: function() {
