@@ -135,21 +135,25 @@
                       </div>
                     </div>
                   </div>
-                  <br />
-                <div class="show-redeem-point" v-if="isMember">
-                  <p>
-                    Your points : @{{ profile.point }}
-                    (1 point = 1 Baht)
-                  </p>
-                </div>
-
-                <div class="show-redeem-point" v-if="!isMember">
-                  <p >
-                    You are not a member!! &nbsp;&nbsp;
-                    Register to be a member
-                    &nbsp;&nbsp; >> <a href="http://massageparlor.dev/register" style="color:brown">Click here softly</a>
-                  </p>
-                </div>
+                <br/>
+				@if (Route::has('login'))
+					@if (Auth::check())
+		                <div class="show-redeem-point">
+		                  <p>
+		                    Your points : @{{ profile.point }}
+		                    (1 point = 1 Baht)
+		                  </p>
+		                </div>
+					@else
+		                <div class="show-redeem-point">
+		                  <p>
+		                    You are not a member!! &nbsp;&nbsp;
+		                    Register to be a member
+		                    &nbsp;&nbsp; >> <a href="http://massageparlor.dev/register" style="color:brown">Click here softly</a>
+		                  </p>
+		                </div>
+		            @endif
+	            @endif
 
                 <div class="voucher-field">
                   <div class="form-group">
