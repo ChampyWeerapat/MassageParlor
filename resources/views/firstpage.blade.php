@@ -19,23 +19,23 @@
                     @endif
                 </div>
             @endif
+          </div>
 
-            <div class="content">
-                <div class="links">
-                    <a href="">Home</a>
-                    <a href="">Reservation</a>
-                    <a href="">Package & Promotion</a>
-                    <a href="">Massager</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
-        </div>
+          <div class="content">
+              <div class="links">
+                  <a href="{{ url ('/') }}">Home</a>
+                  <a href="{{ url ('/reservation') }}">Reservation</a>
+                  <a href="{{ url ('/') }}">Package & Promotion</a>
+                  <a href="{{ url ('/') }}">Massager</a>
+                  <a href="{{ url ('/') }}">Contact Us</a>
+              </div>
+          </div>
 
         <hr>
 
         @include('layouts._slider')
         @include('layouts._footer')
-        
+
     </body>
 
 </html>

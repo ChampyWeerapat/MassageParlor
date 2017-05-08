@@ -23,7 +23,7 @@
 
             <div class="content">
                 <div class="links">
-                    <a href="">Home</a>
+                    <a href="/">Home</a>
                     <a href="">Reservation</a>
                     <a href="">Package & Promotion</a>
                     <a href="">Massager</a>
@@ -38,19 +38,19 @@
             <div class="container" id="vue-app">
 		<form action="">
 			<div class="reserved-date">
-				วันที่ : 
+				วันที่ :
 				<input type="date" id="date">
 			</div>
 
 			<div class="reserved-massagist">
 				ช่างประจำ :
-				<input type="radio" 
-					   name="massagist" 
+				<input type="radio"
+					   name="massagist"
 					   value="have"
 					   v-on:click="hasMassagist=!hasMassagist">
 					มี
-				<input type="radio" 
-					   name="massagist" 
+				<input type="radio"
+					   name="massagist"
 					   value="dont-have"
 					   v-on:click="hasMassagist=!hasMassagist"
 					   checked>
@@ -77,7 +77,7 @@
 			</div>
 
 			<div class="voucher-field">
-				Redeem Voucher : 
+				Redeem Voucher :
 				<input type="text" id="voucher-code">
 			</div>
 
@@ -91,7 +91,7 @@
         </div>
 
         @include('layouts._footer')
-        
+
     </body>
 
     <script src="js/vue.js" charset="utf-8"></script>
@@ -127,7 +127,7 @@
         },
         method: {
         	submitReserve: function() {
-            	
+
           	}
         }
 	});
