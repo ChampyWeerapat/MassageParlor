@@ -54,3 +54,5 @@ Route::get('voucher', function () {
 });
 Route::resource('create', 'CreateVoucherController');
 Route::post('create', 'CreateVoucherController@store');
+
+Route::get('pdf','PDFController@pdf');
