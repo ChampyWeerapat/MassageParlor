@@ -42,9 +42,7 @@ Route::get('/editrole', [
     'middleware' => 'role:owner',
     'uses' => 'EditRoleController@index',
 ]);
-Route::get('/massager', function () {
-    return view('massager');
-});
+Route::get('/massager', 'MassagistController@index');
 
 Route::get('/add-employee', function () {
     return view('add-employee');

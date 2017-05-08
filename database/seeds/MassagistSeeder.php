@@ -13,24 +13,24 @@ class MassagistSeeder extends Seeder
     {
         //
         DB::table('massagist')->insert([
-            'name' => "Champ",
-            'imgpath' => "",
+            'name' => "Weerapat",
+            'imgpath' => "img/massager/weerapat.jpg",
         ]);
         DB::table('massagist')->insert([
-            'name' => "Meng",
-            'imgpath' => "",
+            'name' => "Ariyamak",
+            'imgpath' => "img/massager/ariyamak.jpg",
         ]);
         DB::table('massagist')->insert([
-            'name' => "Mick",
-            'imgpath' => "",
+            'name' => "Apisit",
+            'imgpath' => "img/massager/apisit.jpg",
         ]);
         DB::table('massagist')->insert([
-            'name' => "Air",
-            'imgpath' => "",
+            'name' => "Narumon",
+            'imgpath' => "img/massager/narumon.jpg",
         ]);
         DB::table('massagist')->insert([
-            'name' => "Namphueng",
-            'imgpath' => "",
+            'name' => "Boonyaporn",
+            'imgpath' => "img/massager/boonyaporn.jpg",
         ]);
 
     }
