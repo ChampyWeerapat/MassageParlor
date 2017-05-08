@@ -14,6 +14,11 @@ class CreateVoucherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function index(){
+      return view('createvouchers');
+    }
+    
     public function store(Request $request){
       $count = $request->input('num_vouc');
 

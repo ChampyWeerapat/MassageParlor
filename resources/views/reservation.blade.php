@@ -30,7 +30,7 @@
                         <label>:</label>
                       </div>
                       <div class="col-6 col-md-4">
-                        <input type="date" id="date" class="form-control">
+                        <input type="date" id="date" name="date" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -87,9 +87,9 @@
                           <label>:</label>
                         </div>
                         <div class="col-6 col-md-4">
-                          <select name="massagist-list" class="form-control">
+                          <select id="massagist-list" name="massagist-list" class="form-control">
                             @foreach ($massagists as $massagist)
-                            <option value="$massagists->id" >
+                            <option value="{{$massagist->id}}" >
                                      {{$massagist->name}}
                             </option>
                             @endforeach
@@ -194,7 +194,29 @@
     </body>
 
 
+<script>
+  $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+  $(document).ready(function(){
+    $("#massagist-list").change(function(){
+            alert("1234")
+            $.ajax({
+               type:'POST',
+               url:'/getmsg',
+               data:'_token = <?php echo csrf_token() ?>',
+               success:function(data){
+                  alert(data);
+               }
+          });
+        });
+        });
+</script>
 <script src="js/vue.js" charset="utf-8"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script>
 	var vm = new Vue({
 		el: '#vue-app',
@@ -213,6 +235,7 @@
           	}
         }
 	});
+
 </script>
 
 

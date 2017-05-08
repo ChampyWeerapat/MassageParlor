@@ -37,9 +37,15 @@ Route::get('/massager', 'MassagistController@index');
 Route::get('/add-employee', function () {
     return view('add-employee');
 });
-Route::get('voucher', function () {
-    return view('createvouchers');
-});
+// Route::get('voucher', function () {
+//     return view('createvouchers');
+// });
+
+Route::get('voucher', [
+    'middleware' => 'role:owner',
+    'uses' => 'CreateVoucherController@index',
+]);
+
 Route::get('promotion', function () {
     return view('promotion');
 });
@@ -52,6 +58,14 @@ Route::get('promotion', function () {
     return view('promotion');
 });
 
-Route::get('/add-massager', function () {
-    return view('add-massager');
-});
+Route::get('/add-massager', [
+    'middleware' => 'role:owner',
+    'uses' => 'MassagistController@index2',
+]);
+
+Route::post('/add-massager', [
+    'middleware' => 'role:owner',
+    'uses' => 'MassagistController@addDB',
+]);
+
+Route::post('/getmsg','AjaxController@index');
