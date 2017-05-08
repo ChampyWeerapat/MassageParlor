@@ -15,6 +15,7 @@ body {
     background: url(../img/massage-logo.png) no-repeat;
     background-size: 15%;
     background-position-x: 50%;
+    margin: 0px;
 }
 
 .position-ref {
@@ -30,6 +31,7 @@ body {
 .content {
     text-align: center;
     padding-top: 80px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .title {
@@ -46,8 +48,7 @@ body {
     text-transform: uppercase;
 }
 
-
-/*.bg-logo {
-    background: url(../img/massage-logo.png);
-    height: 20px;
-}*/
+.block-reserve {
+    font-family: 'Roboto', sans-serif;
+    font-size: 80%;
+}
