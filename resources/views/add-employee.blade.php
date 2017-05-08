@@ -10,8 +10,7 @@
 </head>
 
 <body>
-  <div class="flex-center position-ref bg-logo">
-    @include('layouts._adminmenubar')
+    @include('layouts._menubar')
     <div class="container" id="vue-app">
         <div v-if="isRegisterMode">
             <div class="title">
@@ -258,7 +257,6 @@
             </div>
         </div>
       </div>
-    </div>
 
     <script src="js/vue.js"></script>
     <script>

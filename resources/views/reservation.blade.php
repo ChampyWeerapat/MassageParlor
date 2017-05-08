@@ -47,9 +47,11 @@
                       <div class="col-6 col-md-4">
                         <div class="form-group">
                           <select name="course-list" class="form-control">
-                            <option value="" v-for='(course, index) in courses'>
-                                     @{{ course.name }}
+							@foreach ($courses as $course)
+                            <option value="$course->id" >
+                                     {{$course->name}}
                             </option>
+                            @endforeach
                           </select>
                         </div>
                       </div>
@@ -86,9 +88,11 @@
                         </div>
                         <div class="col-6 col-md-4">
                           <select name="massagist-list" class="form-control">
-                            <option v-for='(massagist, index) in massagists' v-bind:value="massagist.name">
-                              @{{ massagist.name }}
+                            @foreach ($massagists as $massagist)
+                            <option value="$massagists->id" >
+                                     {{$massagist->name}}
                             </option>
+                            @endforeach
                           </select>
                         </div>
                       </div>
@@ -131,21 +135,25 @@
                       </div>
                     </div>
                   </div>
-                  <br />
-                <div class="show-redeem-point" v-if="isMember">
-                  <p>
-                    Your points : @{{ profile.point }}
-                    (1 point = 1 Baht)
-                  </p>
-                </div>
-
-                <div class="show-redeem-point" v-if="!isMember">
-                  <p >
-                    You are not a member!! &nbsp;&nbsp;
-                    Register to be a member
-                    &nbsp;&nbsp; >> <a href="http://massageparlor.dev/register" style="color:brown">Click here softly</a>
-                  </p>
-                </div>
+                <br/>
+				@if (Route::has('login'))
+					@if (Auth::check())
+		                <div class="show-redeem-point">
+		                  <p>
+		                    Your points : @{{ profile.point }}
+		                    (1 point = 1 Baht)
+		                  </p>
+		                </div>
+					@else
+		                <div class="show-redeem-point">
+		                  <p>
+		                    You are not a member!! &nbsp;&nbsp;
+		                    Register to be a member
+		                    &nbsp;&nbsp; >> <a href="http://massageparlor.dev/register" style="color:brown">Click here softly</a>
+		                  </p>
+		                </div>
+		            @endif
+	            @endif
 
                 <div class="voucher-field">
                   <div class="form-group">
@@ -181,8 +189,6 @@
         </div>
       </div>
 
-
-
         @include('layouts._footer')
 
     </body>
@@ -199,32 +205,7 @@
 	            name: '',
 	            point: 0
         	},
-        	massagists: [],
-        	courses: [],
         	isMember: false
-        },
-        mounted: function() {
-        	this.massagists.push({
-        		name: 'Apisit'
-        	});
-        	this.massagists.push({
-        		name: 'Weerapat'
-        	});
-        	this.massagists.push({
-        		name: 'Nampueng'
-        	});
-        	this.massagists.push({
-        		name: 'Air'
-        	});
-        	this.courses.push({
-        		name: 'Body'
-        	});
-        	this.courses.push({
-        		name: 'Half'
-        	});
-        	this.courses.push({
-        		name: 'Feet'
-        	});
         },
         method: {
         	submitReserve: function() {

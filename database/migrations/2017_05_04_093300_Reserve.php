@@ -20,6 +20,7 @@ class Reserve extends Migration
             $table->integer('massagist_id')->unsigned();
             $table->integer('course_id')->unsigned();
             $table->dateTime('reserve_time');
+            $table->dateTime('end_time');
             $table->string('name');
             $table->string('tel');
             $table->rememberToken();

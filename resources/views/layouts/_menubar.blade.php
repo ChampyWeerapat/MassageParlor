@@ -44,7 +44,7 @@
         <div class="links">
             <a href="/">Home</a>
             <a href="/reservation">Reservation</a>
-            <a href="">Package & Promotion</a>
+            <a href="/promotion">Package & Promotion</a>
             <a href="/massager">Massager</a>
             <a href="/contact">Contact Us</a>
         </div>
@@ -52,7 +52,7 @@
           <div class="links" >
               <a style="color:red" href="/add-employee">Add employee</a>
               <a style="color:red" href="/voucher">Generate Vochers</a>
-              <a style="color:red" href="">Add Promotion</a>
+              <a style="color:red" href="#">Add Promotion</a>
           </div>
         @endrole
     </div>

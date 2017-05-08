@@ -17,7 +17,7 @@ class User extends Authenticatable implements HasRoleContract
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password','address','tel',
+        'name', 'email', 'password','address','tel','point',
     ];
 
     /**
