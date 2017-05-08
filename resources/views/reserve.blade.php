@@ -26,6 +26,9 @@
 					   v-on:click="hasMassagist=!hasMassagist"
 					   checked>
 					ไม่มี
+
+				<br>
+				<br>
 				<div v-if=hasMassagist>
 					<select name="massagist-list">
 						<option value="" v-for='(massagist, index) in massagists'>
@@ -35,23 +38,33 @@
 					</select>
 				</div>
 			</div>
-
-			<div class="reserved-table">
-				<!-- time table -->
+			<br>
+			<div class="table" v-if="hasMassagist">
+				<table border="1" cellspacing="0" cellpadding="5">
+					<tr>
+						<th>เวลาเข้างาน</th>
+						<th>เวลาออกงาน</th>
+					</tr>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
 			</div>
 
-			<div class="show-redeem-point">
+			<div class="show-redeem-point" v-if="isMember">
 				<p>
 					แต้มสะสมที่มี : @{{ profile.point }}
 					(1 แต้มเท่ากับ 1 บาท)
 				</p>
 			</div>
 
+			<br>
 			<div class="voucher-field">
 				กรอกโค้ด Voucher: 
 				<input type="text" id="voucher-code">
 			</div>
-
+			
+			<br>
 			<div class="submit-button">
 				<button v-on:click="submitReserve()">
 					จอง
