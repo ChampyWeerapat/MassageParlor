@@ -32,3 +32,7 @@ Route::get('/reservation', 'ReserveController@index');
 Route::get('reservation', function () {
     return view('reservation');
 });
+
+Route::get('/contact', function () {
+    return view('contactus');
+});

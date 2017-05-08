@@ -10,51 +10,29 @@
 
     </head>
     <body>
-        <div class="flex-center position-ref bg-logo">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
+      @include('layouts._menubar')
 
-            <div class="content">
-                <div class="links">
-                    <a href="/">Home</a>
-                    <a href="">Reservation</a>
-                    <a href="">Package & Promotion</a>
-                    <a href="">Massager</a>
-                    <a href="">Contact Us</a>
-                </div>
-            </div>
 
-            <hr>
-
-            
 
         <div class="block-reserve">
             <div class="container" id="vue-app">
                 <h1>Reserve Course</h1>
 		<form action="">
-            
+
 			<div class="reserved-date">
-				Date : 
+				Date :
 				<input type="date" id="date">
 			</div>
 
 			<div class="reserved-massagist">
 				Would you like to specify the massager? :
-				<input type="radio" 
-					   name="massagist" 
+				<input type="radio"
+					   name="massagist"
 					   value="have"
 					   v-on:click="hasMassagist=!hasMassagist">
 					Yes
-				<input type="radio" 
-					   name="massagist" 
+				<input type="radio"
+					   name="massagist"
 					   value="dont-have"
 					   v-on:click="hasMassagist=!hasMassagist"
 					   checked>
@@ -81,7 +59,7 @@
 			</div>
 
 			<div class="voucher-field">
-				Redeem Voucher : 
+				Redeem Voucher :
 				<input type="text" id="voucher-code">
 			</div>
 
@@ -95,10 +73,10 @@
         </div>
         </div>
 
-        
+
 
         @include('layouts._footer')
-        
+
     </body>
 
     <script src="js/vue.js" charset="utf-8"></script>
@@ -134,7 +112,7 @@
         },
         method: {
         	submitReserve: function() {
-            	
+
           	}
         }
 	});
