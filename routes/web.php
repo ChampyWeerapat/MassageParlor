@@ -52,6 +52,9 @@ Route::get('/add-employee', function () {
 Route::get('voucher', function () {
     return view('createvouchers');
 });
+Route::get('promotion', function () {
+    return view('promotion');
+});
 Route::resource('create', 'CreateVoucherController');
 Route::post('create', 'CreateVoucherController@store');
 
