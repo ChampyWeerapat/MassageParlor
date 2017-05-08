@@ -27,3 +27,7 @@ Route::get('index', function () {
 
 
 Route::get('/reserve', 'ReserveController@index');
+Route::get('/editrole', [
+    'middleware' => 'role:owner',
+    'uses' => 'EditRoleController@index',
+]);

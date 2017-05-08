@@ -17,6 +17,7 @@ class Massagist extends Migration
         Schema::create('massagist', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('imgpath');
             $table->rememberToken();
             $table->timestamps();
         });
