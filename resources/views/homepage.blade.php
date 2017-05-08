@@ -5,12 +5,12 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/banner1.jpg');height:40%">
+    <header class="intro-header page-heading"style="background-image: url('img/logo.png');background-size:30%">
         <div class="container">
             <div class="row">
                   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1 style="font-size:40px;color:black">Massage  Parlor</h1>
+                        <!-- <h1 style="font-size:40px;color:black">Massage  Parlor</h1> -->
 
                         <!-- <hr class="small" style="color:black"> -->
                         <!-- <span class="subheading">Let your body relaxed</span> -->
@@ -22,7 +22,7 @@
     </header>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav" >
+        <ul class="nav navbar-nav " >
             <li>
                 <a href="index.html">Home</a>
             </li>
@@ -42,6 +42,7 @@
             </li>
         </ul>
     </div>
+
 
     @include('layouts._slider')
 
@@ -107,6 +108,19 @@
     <hr>
 
     @include('layouts._footer')
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
 
 </body>
 

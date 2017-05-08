@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('firstpage');
 });
 
 Auth::routes();
@@ -20,10 +20,19 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('index', function () {
-    return view('index');
-});
-
-
+// Route::get('index', function () {
+//     return view('index');
+// });
 
 Route::get('/reserve', 'ReserveController@index');
+Route::get('/reservation', 'ReserveController@index');
+
+
+
+Route::get('reservation', function () {
+    return view('reservation');
+});
+
+Route::get('/contact', function () {
+    return view('contactus');
+});
