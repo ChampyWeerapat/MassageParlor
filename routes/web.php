@@ -24,6 +24,13 @@ Route::get('index', function () {
     return view('index');
 });
 
-
-
 Route::get('/reserve', 'ReserveController@index');
+Route::get('/reservation', 'ReserveController@index');
+
+Route::get('firstpage', function () {
+    return view('firstpage');
+});
+
+Route::get('reservation', function () {
+    return view('reservation');
+});
