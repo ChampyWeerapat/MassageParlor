@@ -50,6 +50,11 @@
                             <option value="" v-for='(course, index) in courses'>
                                      @{{ course.name }}
                             </option>
+							@foreach ($courses as $course)
+                            <option value="$course->id" >
+                                     {{$course->description}}
+                            </option>
+                            @endforeach
                           </select>
                         </div>
                       </div>
@@ -89,6 +94,11 @@
                             <option v-for='(massagist, index) in massagists' v-bind:value="massagist.name">
                               @{{ massagist.name }}
                             </option>
+                            @foreach ($massagists as $massagist)
+                            <option value="$massagists->id" >
+                                     {{$massagist->name}}
+                            </option>
+                            @endforeach
                           </select>
                         </div>
                       </div>
@@ -182,6 +192,12 @@
       </div>
 
 
+        <div class="col col-md-4">
+          <div style="border:1px solid gray; border-radius:5px; margin-right:10%; height:450px; padding:20px;">
+              test
+          </div>
+        </div>
+      </div>
 
         @include('layouts._footer')
 
@@ -225,6 +241,8 @@
         	this.courses.push({
         		name: 'Feet'
         	});
+        },
+        	isMember: false
         },
         method: {
         	submitReserve: function() {

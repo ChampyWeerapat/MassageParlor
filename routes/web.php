@@ -24,7 +24,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 //     return view('index');
 // });
 
-Route::get('/reserve', 'ReserveController@index');
 Route::get('/reservation', 'ReserveController@index');
 
 Route::get('reservation', function () {
@@ -35,7 +34,6 @@ Route::get('/contact', function () {
     return view('contactus');
 });
 
-Route::get('/reserve', 'ReserveController@index');
 Route::get('/editrole', [
     'middleware' => 'role:owner',
     'uses' => 'EditRoleController@index',
