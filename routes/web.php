@@ -51,3 +51,7 @@ Route::get('pdf','PDFController@pdf');
 Route::get('promotion', function () {
     return view('promotion');
 });
+
+Route::get('/add-massager', function () {
+    return view('add-massager');
+});

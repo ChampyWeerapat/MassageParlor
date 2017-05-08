@@ -15,7 +15,7 @@
                 <br />
                 <div class="columns">
                     <div class="column is-10" style="margin-top:25px">
-                        <strong><h1>ADD EMPLOYEE</h1></strong>
+                        <strong><h1>ADD MASSAGER</h1></strong>
                     </div>
                 </div>
 
@@ -41,10 +41,11 @@
                             </div>
 
                             <div class="field">
-                                <h4 class="title">Phone Number</h4>
-                                <p class="control">
-                                    <input v-model="formGuests.phone" class="input" type="text" />
-                                </p>
+                                <h4 class="title">Picture</h4>
+                                <!-- picture -->
+                                <!-- <p class="control">
+                                    <input v-model="" class="input" type="text" />
+                                </p> -->
                             </div>
 
                             <div class="has-text-centered">
@@ -52,8 +53,6 @@
                             </div>
 
                             <hr>
-
-
 
                         </div>
                     </div>
@@ -68,7 +67,7 @@
                                         <th>No.</th>
                                         <th>Firstname</th>
                                         <th>Lastname</th>
-                                        <th>Phone Number</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -77,7 +76,7 @@
                                         <td> </td>
                                         <td> </td>
                                         <td>  </td>
-                                        <td>  </td>
+
                                     </tr>
 
                                 </tbody>
