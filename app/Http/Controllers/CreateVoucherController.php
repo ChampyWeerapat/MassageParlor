@@ -42,6 +42,8 @@ class CreateVoucherController extends Controller
            ]
         );
       }
+      header("Location: http://massageparlor.dev/pdf");
+      die();
 
 
       return "";
