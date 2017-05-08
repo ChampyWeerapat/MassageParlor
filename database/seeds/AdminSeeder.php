@@ -35,6 +35,7 @@ class AdminSeeder extends Seeder
         	'password' => bcrypt('admin'),
         	'address' => 'abc',
         	'tel' => '0809950951',
+            'point' => 0,
     	]);
 
     	$admin->attachRole($adminRole);
