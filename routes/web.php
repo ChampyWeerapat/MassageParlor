@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('firstpage');
-});
+Route::get('/', 'FirstPageController@index');
 
 Auth::routes();
 
