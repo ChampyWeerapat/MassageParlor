@@ -49,3 +49,8 @@ Route::get('/massager', function () {
 Route::get('/add-employee', function () {
     return view('add-employee');
 });
+Route::get('voucher', function () {
+    return view('createvouchers');
+});
+Route::resource('create', 'CreateVoucherController');
+Route::post('create', 'CreateVoucherController@store');

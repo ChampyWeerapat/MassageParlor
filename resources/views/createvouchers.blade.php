@@ -39,37 +39,3 @@
 <!-- </script> -->
 
 </html>
-<?php
-// $output = '';
-// if(isset($_GET['num_vouc'])){
-// 	$num = $_GET['num_vouc'];
-//   $value = $_GET['value'];
-//   $type = $_GET['type'];
-//   $des = $_GET['descrip'];
-// 	$output ="";
-//   if($type == 'percent'){
-//     $type = "%";
-//   }else if($type == 'cash'){
-//     $type = "บาท";
-//   }
-// 	for ($i=0; $i < $num ; $i++) {
-// 		$count = $i+1;
-// 		$output .= "
-// 		<p>Voucher $count </p>
-// 		<form action='create' method='POST'>
-// 		<div>
-//     ส่วนลด $value $type
-//     เงื่อนไขการใช้ : $des
-// 		</div><hr>";
-// 	}
-// 		echo $output;
-// 		echo "
-//     <input type='hidden' name='_token' value='{{ csrf_token() }}'>
-//     <button v-on:click='submit()'>
-// 						บันทึก
-// 					</button> ";
-// 		echo "<button >
-// 						พิมพ์
-// 					</button></form>";
-// }
- ?>

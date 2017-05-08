@@ -43,15 +43,7 @@ class CreateVoucherController extends Controller
         );
       }
 
-      // echo "test";
-      // DB::table('voucher')->insert(
-      //     ['code' =>'1345 68',
-      //      'type' => 'percent',
-      //      'amount' => 30,
-      //      'description' => 'make it',
-      //      'remember_token' => 'w'
-      //    ]
-      // );
+
       return "";
 
     }
