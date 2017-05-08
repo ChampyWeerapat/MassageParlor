@@ -29,7 +29,7 @@
 				
 				<br>
 				<br>
-				<div v-if=hasMassagist>
+				<div>
 					<select name="course-list">
 						<option value="" v-for='(course, index) in courses'>
 							@{{ index + 1 }}.
@@ -41,7 +41,7 @@
 				<br>
 				<div v-if=hasMassagist>
 					<select name="massagist-list">
-						<option value="" v-for='(massagist, index) in massagists'>
+						<option v-for='(massagist, index) in massagists' v-bind:value="massagist.name">
 							@{{ index + 1 }}.
 							@{{ massagist.name }}
 						</option>
@@ -66,7 +66,10 @@
 					เวลาที่เริ่ม : 
 					<input type="text" id="hour" maxlength="2" size="2" placeholder="hr">
 					:
-					<input type="text" id="minute" maxlength="2" size="2" placeholder="min">
+					<select name="min" id="min">
+						<option value="full">00</option>
+						<option value="have">30</option>
+					</select>
 				</p>
 			</div>
 
