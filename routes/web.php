@@ -49,3 +49,7 @@ Route::resource('create', 'CreateVoucherController');
 Route::post('create', 'CreateVoucherController@store');
 
 Route::get('pdf','PDFController@pdf');
+
+Route::get('promotion', function () {
+    return view('promotion');
+});
