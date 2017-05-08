@@ -67,6 +67,12 @@ hr.small {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
+
+}
+.navbar-centetr {
+    display: inline-block;
+    float: none;
+    margin: 0;
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
@@ -96,6 +102,7 @@ hr.small {
   .navbar-custom .nav li ul.dropdown-menu a:focus {
     color: #0085A1;
   }
+
 }
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
@@ -110,6 +117,7 @@ hr.small {
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+
   }
   .navbar-custom.is-fixed {
     /* when the user scrolls down, we hide the header right above the viewport */
