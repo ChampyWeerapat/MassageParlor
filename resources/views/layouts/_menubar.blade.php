@@ -53,7 +53,7 @@
               <a style="color:red" href="/add-employee">Add Employee</a>
               <a style="color:red" href="/add-massager">Add Massager</a>
               <a style="color:red" href="/voucher">Generate Vochers</a>
-              <a style="color:red" href="#">Add Promotion</a>
+              <a style="color:red" href="/add-promotion">Add Promotion</a>
           </div>
         @endrole
     </div>

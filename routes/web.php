@@ -55,3 +55,7 @@ Route::get('promotion', function () {
 Route::get('/add-massager', function () {
     return view('add-massager');
 });
+
+Route::get('/add-promotion', function () {
+    return view('add-promotion');
+});
