@@ -1,52 +1,58 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+﻿วิธีการติดตั้งโปรแกรม
+1. สร้างไฟล์ .env โดย copy จากไฟล์ .env.example 
+แล้วแก้ไขไฟล์ตามรายละเอียดด้านล่าง ดังต่อไปนี้
+	DB_DATABASE = massageparlor
+	DB_USERNAME= root
+	DB_PASSWORD=
+2. พิมพ์คำสั่ง composer update ลงใน Terminal
+3. สร้าง database ชื่อ massageparlor
+4. ทำการ migrate database ด้วยคำสั่ง php artisan migrate
+5. ทำการใส่ข้อมูลเบื้องต้นเข้าสู่ database ด้วยคำสั่ง php artisan db:seed
+6. อีเมล์ admin : oscar@github.com รหัส  admin
+**********************************************************
+7. อีเมล์สำหรับติดต่อ : weerapat.ka@ku.th
+Facebookสำหรับติดต่อ: Weerapat Karavee
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+รายละเอียดหน้าที่การทำงานภายในกลุ่ม 
+1.นาย  วีรภัทร การะวี : 
+	รับผิดชอบในส่วนของ	- การทำหน้าจองเวลานวด 
+			- การแก้ปัญหาในเรื่องของ GIT ทั้งหมดในเวลาที่ GIT มีปัญหา 	
+			- การทำ authentication
+			- แก้ debug งานที่เพื่อนเจอปัญหา 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+2.นางสาวนฤมล เพชรศิริ : 
+	รับผิดชอบในส่วนของ	- สร้างหน้า contact us , massager
+			-generate google map ในหน้า contact us 
+			- ทำ slide show รูปภาพหน้า home 
+			- ช่วยจัดวาง layout หน้า home,add employee , ออกแบบหน้าจอของตัวเว็บไซต์  ร่วมกับ นางสาวบุณยาพร
+			- ช่วยจัดวาง layout หน้า package&promotion,generate voucher ร่วมกับ นายอริยมรรค
+			- การจัด component, query ข้อมูลรูปภาพและข้อมูลจาก database มาแสดง
+			- การสร้าง route path ใน web.php เพื่อเชื่อมหน้าจอต่างๆ ร่วมกับ นางสาวบุณยาพร
+			- ช่วยเพื่อน debug โปรแกรมเล็กน้อย
+			- จัดการเกี่ยวกับการมีสิทธิ์เข้าถึงแถบ menubar ที่เป็นของ guest,member และ admin
+3.นางสาวบุณยาพร นาคจำรัสศรี :
+	รับผิดชอบในส่วนของ	- สร้างโครงสร้างส่วนประกอบของ menubar
+			- สร้างหน้า add massager , add promotion
+			- ช่วยจัดวาง และให้คำแนะนำในการจัดวางหน้า CSS ให้เพื่อนๆ เกี่ยวกับlayout หน้า home,add employee, reservation , ออกแบบหน้าจอของตัวเว็บไซต์  ร่วมกับ นางสาวนฤมล
+			- ทำแถบ login , logout, register ตรงแถบด้านบนให้สมบูรณ์ตามที่ออกแบบไว้
+			- ช่วยจัดวาง layout ของ pdf voucher ร่วมกับ นายอริยมรรค
+			- การจัด component, query ข้อมูลรูปภาพและข้อมูลจาก database มาแสดง
+			- การสร้าง route path ใน web.php เพื่อเชื่อมหน้าจอต่างๆ และส่วนต่างๆของโปรแกรม ร่วมกับ นางสาวนฤมล
+			- ช่วยเพื่อน debug โปรแกรมเล็กน้อย
+			- จัดการเกี่ยวกับการมีสิทธิ์เข้าถึงแถบ menubar ที่เป็นของ guest,member และ admin
+4.นายอภิสิทธิ์ รุขพันธ์เมธี
+	รับผิดชอบในส่วนของ	- การสร้างไฟล์migrateและไฟล์seederทั้งหมด
+			- ส่วนของcontrollerที่มีการทำงานร่วมกับdatabase เช่น การใส่ข้อมูล ลบข้อมูลเป็นต้น
+			- ส่วนของroleต่างๆ โดยใช้composer package httpoz
+			- ใช้middlewareในการกำหนดผู้ที่มีสิทธิ์เข้าถึงในหน้าต่างๆ
+5.นายอริยมรรค ภัทรพงศ์โอฬาร 
+	รับผิดชอบในส่วนของ 	- สร้างไฟล์ create_voucher ที่ทำการสร้าง voucher 
+			- สามารถนำ voucher มาสร้างเป็นไฟล์ pdf เพื่อปริ้นได้ 
+			  โดยการสร้างpdf คือการ export jspdf ในlaravel 5.3 
+			- จัดวางหน้า voucher ที่เป็นไฟล์ pdf
+			- จัดการส่วน database ที่จะคิวรี่ voucher ที่ต้องการจะปริ้นออกมา
+			- สร้าง controller สำหรับการcreate vocher ปละ gen pdf
+			
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
-
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- **[Codecourse](https://www.codecourse.com)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
