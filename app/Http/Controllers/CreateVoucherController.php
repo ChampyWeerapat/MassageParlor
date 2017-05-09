@@ -42,7 +42,7 @@ class CreateVoucherController extends Controller
            ]
         );
       }
-      header("Location: http://massageparlor.dev/pdf");
+      header("Location: http://massageparlor.dev/pdf?count=".$count);
       die();
 
 
