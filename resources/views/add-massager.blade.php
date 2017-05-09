@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    
     @include('layouts._menubar')
     <div class="container" id="vue-app">
         <div>
@@ -26,17 +27,18 @@
                     <div class="tile is-child box notification " style="background-color:#EEB740;">
                         <!-- <h3 style="text-align:center">+ Add new massager</h3> -->
                         <div>
+                        <form action="#" method="POST" enctype="multipart/form-data">
                             <div class="field">
                                 <h4 class="title">Firstname</h4>
                                 <p class="control">
-                                    <input v-model="formGuests.firstname" class="input" type="text" />
+                                    <input v-model="formGuests.firstname" class="input" type="text" id="fname" name="fname"/>
                                 </p>
                             </div>
 
                             <div class="field">
                                 <h4 class="title">Lastname</h4>
                                 <p class="control">
-                                    <input v-model="formGuests.lastname" class="input" type="text" />
+                                    <input v-model="formGuests.lastname" class="input" type="text" id="lname" name="lname"/>
                                 </p>
                             </div>
 
@@ -46,14 +48,16 @@
                                 <!-- <p class="control">
                                     <input v-model="" class="input" type="text" />
                                 </p> -->
+                                <input type="file" name="fileToUpload" id="fileToUpload">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             </div>
 
                             <div class="has-text-centered">
-                                <button class="button button is-white title" v-on:click="submitGuest()">Add Employee</button>
+                                <button class="button button is-white title" type='submit' id='submit' name='submit'>Add Employee</button>
                             </div>
 
                             <hr>
-
+                        </form>
                         </div>
                     </div>
                 </div>
@@ -65,19 +69,17 @@
                                 <thead>
                                     <tr>
                                         <th>No.</th>
-                                        <th>Firstname</th>
-                                        <th>Lastname</th>
-
+                                        <th>Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <!-- <tr v-for="student in students" v-if="student.isLive"> -->
-                                    <tr v-for="(guest,index) in guests">
-                                        <td> </td>
-                                        <td> </td>
-                                        <td>  </td>
-
+                                    @foreach ($mas as $x)
+                                    <tr>
+                                        <td>{{$x->id}}</td>
+                                        <td>{{$x->name}}</td>
                                     </tr>
+                                    @endforeach
 
                                 </tbody>
                             </table>
