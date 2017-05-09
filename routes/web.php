@@ -68,4 +68,6 @@ Route::post('/add-massager', [
     'uses' => 'MassagistController@addDB',
 ]);
 
-Route::post('/getmsg','AjaxController@index');
+Route::post('/reciept','RecieptController@index');
+
+
