@@ -18,7 +18,11 @@
       </div>
 
       <div class="item">
-        <img src="img/feet.jpg"  style="width:100%;">
+        <img src="img/previewspa.jpg"  style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/preview1.jpg"  style="width:100%;">
       </div>
     </div>
 
