@@ -18,7 +18,7 @@
                 <p><span style="font-size:15px">Price</span> <span style="color:red"> 200 </span> <span style="font-size:15px">Bath</span></p>
                 <p><span style="font-size:15px">Take this promotion you will receive </span> <span style="color:red"> 6 </span> <span style="font-size:15px">point</span></p>
                 <div class="submit-button">
-                  <button type="button" class="btn" v-on:click="submitReserve()" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
+                  <button type="button" class="btn" onclick="window.location='{{ url("/reservation") }}'" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
                 <p><span style="font-size:15px">Price</span> <span style="color:red"> 250 </span> <span style="font-size:15px">Bath</span></p>
                 <p><span style="font-size:15px">Take this promotion you will receive </span><span style="color:red"> 7 </span> <span style="font-size:15px">point</span></p>
                 <div class="submit-button" style="margin:10px;padding:10px">
-                  <button type="button" class="btn" v-on:click="submitReserve()" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
+                  <button type="button" class="btn" onclick="window.location='{{ url("/reservation") }}'" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                 <p><span style="font-size:15px">Price</span> <span style="color:red"> 450 </span> <span style="font-size:15px">Bath</span></p>
                 <p><span style="font-size:15px">Take this promotion you will receive </span><span style="color:red"> 10 </span><span style="font-size:15px">point</span></p>
                 <div class="submit-button" style="margin:10px;padding:10px">
-                  <button type="button" class="btn" v-on:click="submitReserve()" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
+                  <button type="button" class="btn" onclick="window.location='{{ url("/reservation") }}'" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
                 </div>
             </div>
             <div class="col-md-4"style="margin:30px;width:300px;height:500px;padding:5px;border:1px solid brown;">
@@ -50,7 +50,7 @@
                 <p><span style="font-size:15px">Price</span> <span style="color:red"> 300 </span> <span style="font-size:15px">Bath</span></p>
                 <p><span style="font-size:15px">Take this promotion you will receive </span> <span style="color:red"> 3 </span>  <span style="font-size:15px">point</span></p>
                 <div class="submit-button" style="margin:10px;padding:10px">
-                  <button type="button" class="btn" v-on:click="submitReserve()" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
+                  <button type="button" class="btn" onclick="window.location='{{ url("/reservation") }}'" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
                 </div>
             </div>
             <div class="col-md-4" style="margin:30px;width:300px;height:500px;padding:5px;border:1px solid brown;">
@@ -60,7 +60,7 @@
                 <p><span style="font-size:15px">Price</span> <span style="color:red"> 450 </span> <span style="font-size:15px">Bath</span></p>
                 <p><span style="font-size:15px">Take this promotion you will receive </span><span style="color:red"> 5 </span>  <span style="font-size:15px">point</span></p>
                 <div class="submit-button" style="margin:10px;padding:10px">
-                  <button type="button" class="btn" v-on:click="submitReserve()" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
+                  <button type="button" class="btn" onclick="window.location='{{ url("/reservation") }}'" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
                 </div>
             </div>
 
@@ -71,7 +71,7 @@
                 <p><span style="font-size:15px">Price</span> <span style="color:red"> 600 </span> <span style="font-size:15px">Bath</span></p>
                 <p><span style="font-size:15px">Take this promotion you will receive </span><span style="color:red"> 9 </span>  <span style="font-size:15px">point</span></p>
                 <div class="submit-button" style="margin:10px;padding:10px">
-                  <button type="button" class="btn" v-on:click="submitReserve()"style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
+                  <button type="button" class="btn" onclick="window.location='{{ url("/reservation") }}'" style="width:100%;background:black;color:white;position:absolute;buttom:0;right:0;left:0">RESERVE</button>
                 </div>
             </div>
          </div>
